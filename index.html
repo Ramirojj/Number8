@@ -14,6 +14,8 @@
    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
    <!-- google font -->
   <link href="https://fonts.googleapis.com/css?family=Fjalla+One" rel="stylesheet">
+    <!-- client js -->
+    <script src="discount.js"></script>
   <!-- client css -->
   <link rel="stylesheet" href="client.css" />
 </head>
@@ -82,7 +84,7 @@ we have the best price ! check out
               You don't want to make Chef Anton mad, do you?
             </div>
             <i>Discount expires: 2/25/2025</i><br />
-            <a href="#">Discount Code</a>
+            <i class="bi bi-receipt"></i> <a href="#">Discount Code</a>
       </div>
       <div class="col">
         Col 2
@@ -94,5 +96,18 @@ we have the best price ! check out
 
         </div>
       </nav>
+       <!-- toast -->
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+      <div class="toast-header">
+        <strong class="me-auto">Product</strong>
+        <small class="text-body-secondary">discount title</small>
+        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+      </div>
+      <div class="toast-body">
+        Discount Code: 1234
+      </div>
+    </div>
+  </div>
 </body>
 </html>
