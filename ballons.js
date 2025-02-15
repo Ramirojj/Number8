@@ -19,5 +19,18 @@ document.addEventListener("DOMContentLoaded", function() {
         elem.classList.add("animate__animated", "animate__bounceOutUp");
     }
   });
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+  const  greeting = document.querySelector("h1.greeting");
+  const animations = ["bounce", "flash", "pulse", "rubberBand"];
+  const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
+
+    greeting.classList.add("animate__animated", `animate__${randomAnimation}`);
+});
+
+
   });
 
