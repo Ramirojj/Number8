@@ -1,4 +1,4 @@
-/*document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function() {
   const elem = document.getElementById('dob');
   const datepicker = new Datepicker(elem, {
     // options
@@ -15,25 +15,4 @@
     }
   });
   });
-*/
-document.addEventListener("DOMContentLoaded", function() {
-  const elem = document.getElementById('dob');
-  const datepicker = new Datepicker(elem, {
-    // options
-    autohide: true,
-    format: 'MM-dd'
-  });
 
-  // uncheck all boxes by default (Firefox)
-  document.querySelectorAll('.form-check-input').forEach(c => c.checked = false);
-
-  // event listener for check/uncheck
-  const checkboxCard = document.getElementById('checkbox-card');
-  if (checkboxCard) {
-    checkboxCard.addEventListener('change', function(e){
-      if (e.target.classList.contains('form-check-input')) {
-        console.log(`${e.target.id} is ${e.target.checked ? 'checked' : 'unchecked'}`);
-      }
-    });
-  }
-});
