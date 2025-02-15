@@ -11,7 +11,11 @@ document.addEventListener("DOMContentLoaded", function() {
     // event listener for check/uncheck
   document.getElementById('checkbox-card').addEventListener('change', function(e){
     if (e.target.classList.contains('form-check-input')) {
-      console.log(e);
+      const elem = document.getElementById(e.target.id + 'Img');
+      elem.style.visibility = "visible";
+      e.target.checked ?
+        elem.classList.add("animate__animated", "animate__bounceInDown") :
+        elem.classList.add("animate__animated", "animate__bounceOutUp");
     }
   });
   });
