@@ -51,6 +51,30 @@ document.addEventListener("DOMContentLoaded", function() {
     toast.show();
   }
 });
+/////
+
+
+////Add ability to check / uncheck all balloons with a single click//
+const tButton  =  document.getElementById("tBalloon");
+
+const   checkBoxes = document.querySelectorAll('.form-check-input');
+
+tButton.addEventListener("click", function()
+ {
+
+  const allChecked = [...checkBoxes].every(checkbox => checkbox.checked);
+
+  checkBoxes.forEach(checkbox => {
+
+    checkbox.checked = !allChecked; 
+
+
+    checkbox .dispatchEvent(new Event ("c")); 
+});
+
+});
+////
+
 
 
   });
