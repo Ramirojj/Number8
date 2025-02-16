@@ -18,6 +18,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
  <!-- custom css -->
  <style>
+  /*Greetind randomseeker*/
    h1.greeting {
      font-family: 'Londrina Shadow';
      color: slategray;
@@ -111,5 +112,31 @@
 
   </div>
   
+
+<!------------------>
+
+<!-- Create a toast when the submit button is clicked only if there are no balloons selected. -->
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3">
+  
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+    <div class="toast-header">
+      
+      <div class="toast-body">
+        please select a ballon 
+      </div>
+
+      <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+
+
+
+<!------------------>
+
+
+
+
 </body>
 </html>

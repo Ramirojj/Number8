@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", function() {
   const elem = document.getElementById('dob');
   const datepicker = new Datepicker(elem, {
@@ -19,18 +20,40 @@ document.addEventListener("DOMContentLoaded", function() {
         elem.classList.add("animate__animated", "animate__bounceOutUp");
     }
   });
-
-
-
+////Ramdom seeker///
 document.addEventListener("DOMContentLoaded", function() {
 
   const  greeting = document.querySelector("h1.greeting");
+  
   const animations = ["bounce", "flash", "pulse", "rubberBand"];
   const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
 
     greeting.classList.add("animate__animated", `animate__${randomAnimation}`);
+
+
+
+
+
+
+    
+});
+
+
+////No ballon selected///
+ 
+ document.getElementById("submit").addEventListener("click", function() {
+  const balloonsChecked = document.querySelectorAll('.form-check-input:checked').length > 0;
+  if (!balloonsChecked) {
+    
+    const toastEl = document.getElementById('liveToast');
+
+  const toast = new bootstrap.Toast(toastEl);
+    toast.show();
+  }
 });
 
 
   });
+
+
 
