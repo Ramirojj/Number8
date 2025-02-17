@@ -75,8 +75,23 @@ tButton.addEventListener("click", function()
 });
 ////
 
+// Hovering the mouse over a checkbox//////////
+const h1 = document.querySelector( 'h1.greeting');
 
+const labels = document.querySelectorAll('.form-check-label');
 
+labels.forEach(label => {
+
+  label.addEventListener('mouseover' , function 
+    ()
+      {
+    const color = this.getAttribute('for');
+    h1.style.color = color; });
+
+  label.addEventListener('mouseout', function () {
+    h1.style.color = 'dimgray';
+  });
+});
   });
 
 
